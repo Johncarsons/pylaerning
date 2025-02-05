@@ -1,0 +1,7 @@
+name = input("What is your name? ")
+age = input("How old are you? ")
+print(f"Hello, {name}! Your age is {age}.")
+place = input("What is your birthplace? ")
+date = input("What is your date of birth? ")
+print(f"Hello, {name}! Your date of birth is {date}. Your Birthplace is {place}. Your age is {age}. ")
+info = input(" Is the information above correct?")
