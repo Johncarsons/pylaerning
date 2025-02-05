@@ -1,13 +1,9 @@
 welc = '''''Welcome 
 lets calculate your BMI'''
 print(welc)
-num1 = float(input("Enter your weight in kilograms: "))
+num1 = float(input("Enter your weight in kg: "))
 num2 = float(input("Enter your height in meters: "))
-if num1 > 0 and num2 > 0:
-    result = num1/(num2**2)
-else:
-    result = " ERROR!!"
-print(f"Your BMI is: {result}")
+result = num1/(num2**2)
 if result < 18.5:
     print(f"You are Underweight with a BMI of {result}")
 elif result < 24.9:
