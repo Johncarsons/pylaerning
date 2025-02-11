@@ -2,8 +2,8 @@ from abc import ABC, abstractmethod
 # encapsulation
 # declaring valuables is called encapsulation
 class Account:
-    def __init__(self, account_ID, holders_name, balance):
-        self.account_ID = account_ID
+    def __init__(self, account_id, holders_name, balance):
+        self.account_ID = account_id
         self.holders_name = holders_name
         self.balance = balance
     def deposit(self, amount):
@@ -25,9 +25,9 @@ class Account:
         return self.holders_name
     # Inheritance
 
-class customer(Account):
-    def __init__(self, account_ID, holders_name, balance, phone_number):
-        super().__init__(account_ID, holders_name, balance)
+class Customer(Account):
+    def __init__(self, account_id, holders_name, balance, phone_number):
+        super().__init__(account_id, holders_name, balance)
         self.phone_number = phone_number
 # poolymorphisim
 class Transaction:
@@ -55,7 +55,7 @@ class MpesaPayment(Paymentsystem):
 
 # Example usage
 mpesa = MpesaPayment
-account1 =  customer( account_ID = "1324", holders_name = "Eric ", balance = 2000, phone_number = 711685266 )
+account1 =  Customer( account_id = "1324", holders_name = "Eric ", balance = 2000, phone_number = 711685266 )
 deposit1 = DepositTransaction(0)
 withdraw1 = WithdrawTransaction(2000)
 
@@ -63,7 +63,7 @@ deposit1.execute(account1)
 withdraw1.execute(account1)
 print(f"The balance of {account1.get_holders_name()} is {account1.get_balance()}")
 
-account2 = customer( 56789, "Kiama", 123456789, 722357224)
+account2 = Customer( 56789, "Kiama", 123456789, 722357224)
 deposit2 = DepositTransaction(560)
 withdraw2 = WithdrawTransaction(910000)
 deposit2.execute(account2)
